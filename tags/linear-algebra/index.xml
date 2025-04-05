@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linear-Algebra on Siam&#39;s Log Book</title>
+    <link>http://localhost:8080/tags/linear-algebra/</link>
+    <description>Recent content in Linear-Algebra on Siam&#39;s Log Book</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 03 Apr 2025 14:26:35 +0600</lastBuildDate>
+    <atom:link href="http://localhost:8080/tags/linear-algebra/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Normed Vector Spaces and Inner Product Spaces</title>
+      <link>http://localhost:8080/note/normed-vector-spaces-and-inner-product-spaces/</link>
+      <pubDate>Thu, 03 Apr 2025 14:26:35 +0600</pubDate>
+      <guid>http://localhost:8080/note/normed-vector-spaces-and-inner-product-spaces/</guid>
+      <description>Normed Vector Space A normed vector space is a vector space $V$ paired with a function $\|\cdot\|: V \rightarrow \mathbb{R}_{\geq 0}$ called the norm function, that assigns &amp;ldquo;lengths&amp;rdquo; to vectors. For $\|\cdot\|$ to be a valid norm it must satisfy the following conditions:&#xA;Non-negativity: $\|v\| \geq 0$ for all vectors $v$. Non-degeneracy: $\|v\| = 0$ iff $v = 0$. Absolute Homogeneity: $\|\alpha v\| = |\alpha|\cdot\|v\|$ for all vectors $v$ and scalars $\alpha$.</description>
+    </item>
+  </channel>
+</rss>
