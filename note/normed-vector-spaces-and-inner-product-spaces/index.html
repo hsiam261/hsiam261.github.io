@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=8080&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/favicon.ico" type="/favicon.ico"/>
+<title>Normed Vector Spaces and Inner Product Spaces | Siam&#39;s Log Book</title>
+
+
+
+
+
+<script>
+  console.log('\/assets\/base.css')
+  console.log('assets\/base.css')
+
+</script>
+
+
+
+
+  <link rel="stylesheet" href="/assets/base.min.fd43127b4dd7b97cce2e9d6a2953c8aed3e2cb412ea0935a77ed6c752c0ee6bc.css" integrity="sha256-/UMSe03XuXzOLp1qKVPIrtPiy0EuoJNad&#43;1sdSwO5rw=" crossorigin="anonymous">
+
+
+      <script src="/js/darkmode.929d1cf85e347ca0f0ab6aeabd1dcb9a09f60cae1f4a217792689166248dbd82.js" integrity="sha256-kp0c&#43;F40fKDwq2rqvR3Lmgn2DK4fSiF3kmiRZiSNvYI=" crossorigin="anonymous" defer></script>
+      <script src="/js/copy-codeblock.80f33002e9d4f9157dca624aff6b21fa586785c9a2c3331bebe1d8a423e18e68.js" integrity="sha256-gPMwAunU&#43;RV9ymJK/2sh&#43;lhnhcmiwzMb6&#43;HYpCPhjmg=" crossorigin="anonymous" defer></script>
+      <script src="/js/collapse-codeblock.0919b8b0724ee0b37d5bac71141a7efe13f0f4cd85d7915e87f60e17c6254d9c.js" integrity="sha256-CRm4sHJO4LN9W6xxFBp&#43;/hPw9M2F15Feh/YOF8YlTZw=" crossorigin="anonymous" defer></script>
+
+
+</head>
+<body>
+  <div class="root" id="root">
+    <header>
+      <nav class="nav">
+    <div class="nav__logo">
+        <svg viewBox="0 0 76 76" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="full" enable-background="new 0 0 76.00 76.00" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path stroke-width="0.2" stroke-linejoin="round" d="M 35.625,29.6875C 36.4995,29.6875 37.2083,30.3964 37.2083,31.2708C 37.2083,32.1453 36.4994,32.8542 35.625,32.8542C 34.7505,32.8542 34.0417,32.1453 34.0417,31.2708C 34.0417,30.3964 34.7505,29.6875 35.625,29.6875 Z M 40.7708,29.6875C 41.6453,29.6875 42.3542,30.3964 42.3542,31.2708C 42.3542,32.1453 41.6453,32.8542 40.7708,32.8542C 39.8964,32.8542 39.1875,32.1453 39.1875,31.2708C 39.1875,30.3964 39.8964,29.6875 40.7708,29.6875 Z M 25.6695,50.3757C 24.9442,48.0415 24.5417,45.4621 24.5417,42.75L 24.5568,41.8418C 22.3238,43.0668 19.8176,44.3333 19,44.3333C 16.8873,44.3333 20.8257,39.4499 25.9794,34.1962C 26.4655,32.8374 27.0638,31.5722 27.7572,30.4249C 28.2641,24.0121 32.6565,19 38,19C 43.3435,19 47.7358,24.0121 48.2428,30.4249C 48.9362,31.5722 49.5345,32.8374 50.0206,34.1962C 55.1743,39.4499 59.1127,44.3333 57,44.3333C 56.1824,44.3333 53.6762,43.0669 51.4432,41.8418L 51.4583,42.75C 51.4583,45.4621 51.0558,48.0415 50.3305,50.3757L 48.2917,49.875C 48.2917,43.7841 45.5317,38.5857 41.649,36.5467L 38,42.75L 34.3514,36.5475C 30.4685,38.59 27.7084,43.8045 27.7085,49.9664L 25.6695,50.3757 Z M 34.0416,26.125C 31.8555,26.125 30.0833,28.2517 30.0833,30.875C 30.0833,33.4984 31.8555,35.625 34.0416,35.625C 36.2278,35.625 38,33.4984 38,30.875C 38,28.2517 36.2278,26.125 34.0416,26.125 Z M 38,30.875C 38,32.6239 39.7722,34.4375 41.9583,34.4375C 44.1444,34.4375 45.9166,32.6239 45.9166,30.875C 45.9166,29.1261 44.1444,27.3125 41.9583,27.3125C 39.7722,27.3125 38,29.1261 38,30.875 Z M 30.0833,50.6667C 33.1473,50.6667 35.7032,52.0266 36.29,53.8333L 36.8125,53.8333L 36.8125,55.4167L 36.29,55.4167C 35.7032,57.2234 33.1473,58.5833 30.0833,58.5833C 26.5855,58.5833 23.75,56.8111 23.75,54.625C 23.75,52.4389 26.5855,50.6667 30.0833,50.6667 Z M 45.9166,50.6667C 49.4144,50.6667 52.25,52.4389 52.25,54.625C 52.25,56.8111 49.4144,58.5833 45.9166,58.5833C 42.8526,58.5833 40.2968,57.2234 39.71,55.4167L 39.1875,55.4167L 39.1875,53.8333L 39.71,53.8333C 40.2968,52.0266 42.8526,50.6667 45.9166,50.6667 Z "></path> </g></svg>
+        <p>Siam&#39;s Log Book</p></a>
+    </div>
+    <div class="nav__links">
+        
+
+        
+        
+            <button><a href="/" >HOME</a></button>
+        
+            <button><a href="/categories/all/" >ALL</a></button>
+        
+            <button><a href="/article/" >ARTICLES</a></button>
+        
+            <button><a href="/note/" >NOTES</a></button>
+        
+            <button><a href="/library/" >LIBRARY</a></button>
+        
+            <button><a href="/about" >ABOUT</a></button>
+        
+        
+    </div>
+    <div class="nav__icon-tray">
+        <button class="nav__icon" id="darkmode-toggle">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z"/></svg>
+        </button>
+    </div>
+</nav>
+
+
+    </header>
+    <div class="container">
+      <div class="aside">
+    <div class="card">
+    <figure>
+        
+        <img src="/profile-pictures/profile.png">
+        
+        
+        <figcaption>Siam Habib</figcaption>
+        
+    </figure>
+    
+    <p> Software Engineer, Optimizely Inc. </p>
+    
+    <div class="icon-tray">
+        
+        <a href="https://github.com/hsiam261/"><button class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="icon__svg"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></button></a>
+        
+
+        
+        <button class="icon"><a href="https://bd.linkedin.com/in/siam-habib-a0a506b4"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon__svg"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></a></button>
+        
+    </div>
+</div>
+
+    
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+<div class="tag-box">
+    <h4>Tags</h4>
+    <div class="tags-tray">
+        
+            <div class="tag">
+                <div class="tag__name"><a href="/tags/building-things-from-scratch">building-things-from-scratch</a></div><div class="tag__count">1</div>
+            </div>
+        
+            <div class="tag">
+                <div class="tag__name"><a href="/tags/cs-theory">cs-theory</a></div><div class="tag__count">1</div>
+            </div>
+        
+            <div class="tag">
+                <div class="tag__name"><a href="/tags/linear-algebra">linear-algebra</a></div><div class="tag__count">1</div>
+            </div>
+        
+            <div class="tag">
+                <div class="tag__name"><a href="/tags/linux">linux</a></div><div class="tag__count">1</div>
+            </div>
+        
+            <div class="tag">
+                <div class="tag__name"><a href="/tags/math">math</a></div><div class="tag__count">1</div>
+            </div>
+        
+            <div class="tag">
+                <div class="tag__name"><a href="/tags/np">np</a></div><div class="tag__count">1</div>
+            </div>
+        
+            <div class="tag">
+                <div class="tag__name"><a href="/tags/systems-programming">systems-programming</a></div><div class="tag__count">1</div>
+            </div>
+        
+            <div class="tag">
+                <div class="tag__name"><a href="/tags/threads">threads</a></div><div class="tag__count">1</div>
+            </div>
+        
+            <div class="tag">
+                <div class="tag__name"><a href="/tags/complexity101">complexity101</a></div><div class="tag__count">2</div>
+            </div>
+        
+            <div class="tag">
+                <div class="tag__name"><a href="/tags/cs">cs</a></div><div class="tag__count">2</div>
+            </div>
+        
+        <div class="tag">
+            <div class="see-all-tag"><a href="/tags/">See All >> </a></div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+      <main class="main">
+        
+  
+
+
+
+<div class="post autonumber">
+    
+    <div class="post__title">
+        <h1> Normed Vector Spaces and Inner Product Spaces </h1>
+    </div>
+    
+
+    
+    <div class="post__metadata">
+    <div class="post__metadata--entry">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="post__metadata--calender-icon"><path d="M128 0c17.7 0 32 14.3 32 32l0 32 128 0 0-32c0-17.7 14.3-32 32-32s32 14.3 32 32l0 32 48 0c26.5 0 48 21.5 48 48l0 48L0 160l0-48C0 85.5 21.5 64 48 64l48 0 0-32c0-17.7 14.3-32 32-32zM0 192l448 0 0 272c0 26.5-21.5 48-48 48L48 512c-26.5 0-48-21.5-48-48L0 192zm64 80l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16zm128 0l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0zM64 400l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0zm112 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16z"/></svg> Apr 03, 2025
+    </div>
+    <div class="post__metadata--entry">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="post__metadata--folder-icon"><path d="M88.7 223.8L0 375.8 0 96C0 60.7 28.7 32 64 32l117.5 0c17 0 33.3 6.7 45.3 18.7l26.5 26.5c12 12 28.3 18.7 45.3 18.7L416 96c35.3 0 64 28.7 64 64l0 32-336 0c-22.8 0-43.8 12.1-55.3 31.8zm27.6 16.1C122.1 230 132.6 224 144 224l400 0c11.5 0 22 6.1 27.7 16.1s5.7 22.2-.1 32.1l-112 192C453.9 474 443.4 480 432 480L32 480c-11.5 0-22-6.1-27.7-16.1s-5.7-22.2 .1-32.1l112-192z"/></svg> note
+    </div>
+</div>
+
+    
+    <div class="post__content">
+        <h2 id="normed-vector-space">Normed Vector Space</h2>
+<p>A normed vector space is a vector space $V$ paired with a function $\|\cdot\|: V \rightarrow \mathbb{R}_{\geq 0}$ called the norm function, that assigns &ldquo;lengths&rdquo; to vectors. For $\|\cdot\|$ to be a valid norm it must satisfy the following conditions:</p>
+<ul>
+<li><strong>Non-negativity:</strong> $\|v\| \geq 0$ for all vectors $v$.</li>
+<li><strong>Non-degeneracy:</strong> $\|v\| = 0$ iff $v = 0$.</li>
+<li><strong>Absolute Homogeneity:</strong> $\|\alpha v\| = |\alpha|\cdot\|v\|$ for all vectors $v$ and scalars $\alpha$.</li>
+<li><strong>Triangle Inequality:</strong> For all pairs of vector $u$ and $v$ $\|u\| + \|v\| \geq \|u+v\|$.</li>
+</ul>
+<p>Examples of Norms would be:</p>
+<ul>
+<li>$L_p$-<strong>Norm</strong> $( 1\leq p < \infty)$: Is often expressed as $\|\cdot\|_p$ and is defined as $\|x\|_p = (\sum_{i=1}^n|x_i|^p)^{\frac{1}{p}}$. Clearly it is homogenous, non-degenerate and non-negative. It also satisfies the triangle inequality due to <a href="https://en.wikipedia.org/wiki/Minkowski_inequality">Minkowski inequality</a>.</li>
+<li>$L_{\infty}$<strong>-Norm</strong>: $\|x\|_{\infty} = \max_{i=1}^n|x_i|$.</li>
+<li>$\|x\| = |f(x)|$ where $f(x)$ is a linear function of $x$ mapping to scalars.</li>
+</ul>
+<h2 id="inner-product-space">Inner Product Space</h2>
+<p>An Inner Product Space is a vector space $V$ paired with a binary function $\langle \cdot, \cdot \rangle: V \times V \rightarrow \mathbb{F}$ called the inner product where $\mathbb{F}$ is the scalar field (i.e $\mathbb{R}$ or $\mathbb{C}$). For the function $\langle \cdot, \cdot \rangle$ to be an inner product it must have the following properties:</p>
+<ul>
+<li><strong>Left-Homogeneity:</strong> $\langle \alpha u, v\rangle = \alpha \langle u, v \rangle$ for all pairs of vectors $u,v$ and scalars $\alpha$.</li>
+<li><strong>Left-Additivity:</strong>  $\langle u_1 + u_2, v\rangle = \langle u_1, v \rangle + \langle u_2, v \rangle$ for all vectors $u_1, u_2,v$.</li>
+<li><strong>Conjugate Symmetry:</strong> $\langle u, v\rangle = \overline{\langle v, u \rangle}$ for pairs of vectors $u,v$.</li>
+<li><strong>Non-negativity:</strong> $\langle u, u \rangle \geq 0$ for all vectors $u$.</li>
+<li><strong>Non-degeneracy:</strong> $\langle u, u \rangle = 0$ if and only if $u = 0$.</li>
+</ul>
+<p>Note that inner product spaces only makes sense when we are defining vector spaces over ordered fields where the conjugate operation is well defined. For real fields, we just take the restriction of cojugation to reals (which is the identity function).</p>
+<h2 id="choices-for-inner-product-operators">Choices For Inner Product Operators</h2>
+<p>Given any vector space $V$ we can have many choices of functions for the inner product operator. Two vectors are called orthogonal if their inner product is zero. Given an inner product operator and a basis of $V$, we can compute a orthogonal set of basis vectors (every pair of vectors in the basis is orthogonal) using something called the <strong>Gram–Schmidt Process</strong>. A set of vectors are called orthonormal if each of the basis vectors have unit length (i.e has norm one) and are pairwise orthogonal. Gram-Schmidt Process gives us an orthonormal set of basis.</p>
+<p><strong>Theorem 1 (Gram-Schimdt Process):</strong> Every inner product space (in $\mathbb{R}$ or $\mathbb{C}$) of finite dimension<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup> has a orthonormal basis set.</p>
+<p>Let $B=(v_1, v_2, ... v_n)$ be a basis of the vector space $v$ and let $x = \sum_{i=1}^n x_iv_i$ and $y = \sum_{i=1}^n y_iv_i$. Then,
+</p>
+$$
+    \begin{aligned}
+    &\langle x, y \rangle \\
+    &= \langle \sum_{i=1}^n x_iv_i, \sum_{i=1}^n y_iv_i \rangle \\
+    &= \sum_{i=1}^n x_i \langle v_i, \sum_{i=1}^n y_iv_i \rangle \\
+    &= \sum_{i=1}^n \sum_{j=1}^n x_i \overline{y_j} \langle v_i,  v_j \rangle \\
+    &= y^*G_Bx
+    \end{aligned}
+$$
+<p>
+where $G_B$ is the <a href="https://en.wikipedia.org/wiki/Gram_matrix"><strong>Gram Matrix</strong></a> for the basis set $B$. Gram matrix for a list of vectors $U = (u_1, u_2, ... u_n)$ is defined as
+</p>
+$$
+G_U =
+\begin{bmatrix}
+\langle u_1, u_1 \rangle & \langle u_1, u_2 \rangle & \cdots & \langle u_1, u_n \rangle \\
+\langle u_2, u_1 \rangle & \langle u_2, u_2 \rangle & \cdots & \langle u_2, u_n \rangle \\
+\vdots & \vdots & \ddots & \vdots \\
+\langle u_n, u_1 \rangle & \langle u_n, u_2 \rangle & \cdots & \langle u_n, u_n \rangle
+\end{bmatrix}
+$$
+<p>If our basis set was orthonormal, we get the following:
+</p>
+$$
+    \begin{align}
+    \langle x, y \rangle  = \sum_{i=1}^n x_i \overline{y_i} \\
+    \end{align}
+$$
+<p>The inner product function that takes two vectors from $\mathbb{F}^n$ and computes $\sum_{i=1}^n x_i \overline{y_i}$ is known as the standard inner product.</p>
+<p>Since all finite dimensional vectors can be represented by columns with respect to some orthonomal basis, all inner product operators for a vector space is actually the standard inner product function (when considering said representation).</p>
+<p>Thus given a vector space, if we pick an arbitrary basis and call them orthonormal, the inner product operator becomes fixed and well defined. Since the same inner product operator gives rise to infinite number of orthonormal basis sets, fixing different basis sets as orthonormal do not always lead to different inner product functions.</p>
+<h2 id="norms-in-inner-product-space">Norms in Inner Product Space</h2>
+<!--An inner product function gives us the ability to establish a norm in the vector space by defining $\|v\|$ as $\sqrt{\langle v, v\rangle}$.-->
+<p>The norm $\|\cdot\|$ of an inner product space $V$ is defined as $\|v\| = \sqrt{\langle v, v\rangle}$.
+$\sqrt{\langle v, v\rangle}$ already satisfy non-negativity and non-degeneracy conditions. Furthermore $\sqrt{\langle \alpha v, \alpha v\rangle} = \sqrt{\alpha \overline{\alpha} \langle v, v\rangle} = |\alpha| \sqrt{\langle v, v\rangle}$ i.e it satisfies the alsolute homogenity property. So to prove that $\sqrt{\langle v, v\rangle}$ is a norm function, all that is required is to show that $\sqrt{\langle v, v\rangle}$ satisfies triangle inequality.</p>
+<p>First note that, $\langle u+v, u+v \rangle = \langle u, u \rangle + \langle v, v \rangle + 2\mathcal{R}\mathcal{e}(\langle u, v \rangle)$. Triangle inequality claims that $\langle u+v, u+v \rangle \leq \langle u, u \rangle + \langle v, v \rangle + 2\sqrt{\langle u, u \rangle \langle v, v \rangle}$. Thus, triangle inequality actually reduces to the following inequality:
+</p>
+$$
+\begin{align}
+    \mathcal{R}\mathcal{e}(\langle u, v \rangle) \leq \sqrt{\langle u, u \rangle \langle v, v \rangle} = \|u\|\|v\|
+\end{align}
+$$
+<p>We will infact prove a stronger result than Inequality 2 known as the <strong><a href="https://en.wikipedia.org/wiki/Cauchy%E2%80%93Schwarz_inequality">Cauchy-Schwartz inequality</a></strong>. The Cauchy-Schwartz inequality is true for inner product spaces regardless of the field as we will prove here:</p>
+<p><strong>Theorem 2 (Cauchy Schwartz Inequality):</strong> Let $V$ be an inner product space and $u, v \in V$ be two vectors. Then $|\langle u, v\rangle| \leq \|u\|\|v\|$.</p>
+<p><strong>Proof:</strong> First note that $\langle x, 0 \rangle = 0$ for any $x \in V$. Thus, if $\|v\| = 0$ (i.e $v = 0$) then the cauchy-schwartz inequality trivially holds. Thus we only need to consider the case when $\|v\| \neq 0$.</p>
+<p>Consider $\|u-tv\|^2$ where $t$ is a scalar. Due to non-negativity, $\|u-tv\|^2 \geq 0$ for any value of $t$. Now if we expand $\|u-tv\|^2$ (using additivity, homogenity and conjugate symmetry) we find that $\|u-tv\|^2 = \|u\|^2 + |t|^2\|v\|^2 - t\langle v, u \rangle - \overline{t}\langle u, v \rangle$. If we set $t = \frac{\langle u, v\rangle}{\|v\|^2}$, then we find $\|u-tv\|^2 = \|u\|^2 + \frac{|\langle u,v\rangle|^2}{v^2} -2\frac{|\langle u,v\rangle|^2}{\|v\|^2} = \|u\|^2 - \frac{|\langle u,v\rangle|^2}{\|v\|^2}$. Since $\|u-tv\|^2 \geq 0$, we have $\|u\|^2 \geq \frac{|\langle u,v\rangle|^2}{\|v\|^2} \implies \|u\|^2\|v\|^2 \geq  |\langle u,v\rangle|^2 \implies \|u\|\|v\| \geq  |\langle u,v\rangle|$.</p>
+<p align=right>$\quad \square$</p>
+<p>Since Cauchy-Schwartz inequality is stronger than Ineqality 2, which is sufficient for triangle inequality, triangle inequality is also satisfied by the norm $\sqrt{\langle v, v\rangle}$. Thus $\|v\| = \sqrt{\langle v, v\rangle}$ is a valid norm.</p>
+<h2 id="polarization-identities-and-the-relation-between-norm-and-inner-product-in-an-inner-product-space">Polarization Identities and The Relation Between Norm and Inner Product in an Inner Product Space</h2>
+<p>Given the inner product function in an inner product space, we can easily obtain the norm for that space by computing $\sqrt{\langle v,v \rangle}$. But instead of being presented with the inner product operator, what if instead we were only provided the norm? Can we express the inner product operator as an expression of the arguments using only vector addition, scalar multiplication, field operations for the scalar, and norm operator?</p>
+<p>The answer is yes and is known as the Polarization Identities.</p>
+<p><strong>Theorem 3 (Polarization Identities):</strong> Let $x, y \in V$ be two vectors in an inner product space.
+Then,
+</p>
+$$ \langle x, y \rangle = \dfrac{1}{4}\sum_{\alpha \in \{1,-1\}} \alpha \|x+ \alpha y\|^2 $$
+<p>
+if $V$ is a vector space over the real field and
+</p>
+$$ \langle x, y \rangle = \dfrac{1}{4}\sum_{\alpha \in \{1,-1, i, -i\}} \alpha \|x+ \alpha y\|^2 $$
+<p>
+if $V$ is a vector space over the field of complex numbers.</p>
+<p>The proof of this is just simplifying the expressions and left as an excercise for the reader.</p>
+<h2 id="are-all-norms-obtainable-from-some-inner-product-operation">Are All Norms Obtainable from Some Inner Product Operation?</h2>
+<p>We call a norm $\|\cdot\|$of a vector space $V$ is obtainable by inner product if there exists some inner product function $\langle \cdot , \cdot \rangle$ of $V$ such that $\|v\| = \sqrt{\langle v, v \rangle}$. Since, the inner product operation in inner product space is determined when we fix the norm operator, does this mean that all norms are obtainable by inner product? Are normed vector spaces and inner product spaces the same thing being represented differently?</p>
+<p>The answer is no.</p>
+<p>In an inner product space just the norm determines the inner product operator. But the when the space is not an inner product space, the polarization identities are not guaranteed. If the said norm was obtainable from some inner product function over the vector space, then the polarization identity uniquely identifies the said inner product function. But, if norm operation is not obtainable from any inner product function, the right hand side of the Polarization Identities will not have all the properties of a inner product function, namely we do not know if it is left additive or left homogenus. Note that conjugate symmetry will hold regardless. The polarization identities make it necessary for the inner product operation to be equal to either $\frac{1}{4}\sum_{\alpha \in \{1,-1\}} \alpha \|x+ \alpha y\|^2$ or $\frac{1}{4}\sum_{\alpha \in \{1,-1, i, -i\}} \alpha \|x+ \alpha y\|^2$ depending on the scalar field. But it is not sufficient and the inner product operation might not exist.</p>
+<p>Not all norms are obtainable from some inner product function. In fact, only norms that are obtainable are the ones that are $L_2$ norms when the vectors are represented as column vectors with respect to some orthonormal basis since the only candidate for the inner product operation is then the standard inner product, which leads to the $L_2$ norm.</p>
+<p>If we are representing vectors as column vectors with respect to some basis set that is not orthonormal, since an orthonormal basis set exists, we know there exists a matrix $A$ takes a column vector and changes its basis returns the column vector representing the same vector with respect to some orthonormal basis. At which point we can compute the norm of $x$ by computing the $L_2$ norm of $Ax$ which is just $\sqrt{x^*(A^*A)x}$. Note that $A^*A$ is a positive operator since $A$ is full rank and every positive operator can be represented as the multiplication of a full rank operator with its hermitian uniquely. If $M = D^*D$ is a positive definite operator, then $\sqrt{x^*Mx}$ represents the norm of $x$ obtained from the inner product operation which has the columns of $D^{-1}$ as an orthonormal basis set. Thus, the only norm functions obtainable from inner product spaces are of the form $\sqrt{x^*Mx}$ where $M$ is a positive definite matrix.</p>
+<h2 id="jordan-von-neumann-theorem">Jordan-Von-Neumann Theorem</h2>
+<p>The strategies in the previous section has some drawbacks. How exactly do you check if your the square of your norm is decomposible to $x^*Mx$ where $M$ is a positive definite matrix?
+And what if your vector space is not in the form of column vectors and in some abstract format?</p>
+<p>A better neseccary and sufficient condition for a norm to be obtainable from an inner product space is given by Pascual Jordan and John Von Neumann in 1935.</p>
+<p><strong>Theorem 4 (Jordan Von Neuman Theorem):</strong> Let $V$ be a normed vector space with the norm $\|\cdot\|$. Then, the norm is obtainable from some inner product function in $V$ if and only if the norm satisfies the parallelogram property ie.
+</p>
+$$ \|x+y\|^2 + \|x-y\|^2 = 2(\|x\|^2 + \|y\|^2) $$
+<p>
+holds for all pairs of vectors $x, y \in V$.</p>
+<p>Since norms obtained from inner product functions obey the parallelogram property, the only if part is very easy. The sufficiency part is not so much. The polarization identities leaves us with only one candidate for our inner product space and we have to show that it follows additivity and homogenity.</p>
+<p>We will only show it for the complex case. The proof for the real case follows a similar procedure. To simplify our notation we define $\phi(x, y) = \frac{1}{4}\sum_{\alpha \in \{1,-1, i, -i\}} \alpha \|x+ \alpha y\|^2$. The norm will be obtainable from an inner product space if and only if $\phi$ is left additive and left homogenus.</p>
+<p><strong>Lemma 1:</strong> $\phi$ is left additive.</p>
+<p><strong>Proof:</strong> We will have to show the following:
+</p>
+$$
+    \begin{align}
+    \phi(x + x', y) = \phi(x,y) + \phi(x', y)
+    \end{align}
+$$
+<p>To prove Equation 3, we will break down to real and imaginary components and multiply both sides by $4$:
+</p>
+$$
+    \begin{align}
+    & \|x+x'+y\|^2 - \|x+x'-y\|^2 = \|x+y\|^2 - \|x-y\|^2 + \|x'+y\|^2 - \|x'-y\|^2 \\
+    & \|x+x'+iy\|^2 - \|x+x'-iy\|^2 = \|x+iy\|^2 - \|x-iy\|^2 + \|x'+iy\|^2 - \|x'-iy\|^2 \\
+    \end{align}
+$$
+<p>Since if you replace $y$ with $iy$ in equation 4 it becomes identical to equation 5. Thus we only need to prove equation 4.</p>
+<p>By applying the parallelogram law, we can write the following:
+</p>
+$$
+    \begin{align}
+    & \|x+x'+y\|^2 + \|x-y\|^2 = 2\|x+\dfrac{x'}{2}\|^2 + 2\|\dfrac{x'}{2}+y\| \\
+    & \|x+x'-y\|^2 + \|x+y\|^2 = 2\|x+\dfrac{x'}{2}\|^2 + 2\|\dfrac{x'}{2}-y\| \\
+    \end{align}
+$$
+<p>Subtracting Equations 6 from Equation 7 we get the following:
+</p>
+$$
+    \begin{align}
+    \|x+x'+y\|^2 - \|x+x'-y\|^2 - \|x+y\|^2 + \|x-y\|^2 = 2\|\dfrac{x'}{2}+y\| - 2\|\dfrac{x'}{2}-y\| \\
+    \end{align}
+$$
+<p>Again from the parallelogram law, we can write the following:
+</p>
+$$
+    \begin{align}
+    & \|x'+ y\|^2  + \|y\|^2 = 2\|\dfrac{x'}{2}\ + y|^2 + 2\|\dfrac{x'}{2}\| \\
+    & \|x'- y\|^2  + \|y\|^2 = 2\|\dfrac{x'}{2}\ - y|^2 + 2\|\dfrac{x'}{2}\| \\
+    \end{align}
+$$
+<p>Subtracting Equations 9 from Equation 10 we get the following:
+</p>
+$$
+    \begin{align}
+    & \|x'+ y\|^2 - \|x'- y\|^2  = 2\|\dfrac{x'}{2}\ + y|^2  - 2\|\dfrac{x'}{2}\ - y|^2 \\
+    \end{align}
+$$
+<p>If we subtract Equation 11 from Equation 8, we can derive Equation 4:
+</p>
+$$
+    \begin{align}
+    & \|x+x'+y\|^2 - \|x+x'-y\|^2 - \|x'+ y\|^2 + \|x'- y\|^2 - \|x+y\|^2 + \|x-y\|^2 = 0 \nonumber \\
+    \implies & \|x+x'+y\|^2 - \|x+x'-y\|^2 = \|x'+ y\|^2 - \|x'- y\|^2 + \|x+y\|^2 - \|x-y\|^2 \nonumber
+    \end{align}
+$$
+<p>
+$\quad \square$</p>
+<p>We will now prove left homogenity of $\phi(x,y)$. First we will consider only the case where the scalar is a rational number. Subsequenty we will show that left homogenity holds even when the scalar is a real or complex number.</p>
+<p><strong>Lemma 2:</strong> $\phi(c x, y) = c\phi(x, y)$ when $c \in \mathbb{Q}$</p>
+<p><strong>Proof:</strong> We break the proof in to the following cases:</p>
+<p><strong>Case 1:</strong> $c = 0$. Then $\phi(c x, y) = \phi(0,y) = \frac{1}{4}\sum_{\alpha \in \{1,-1,i,-i\}}\alpha\|\alpha y\|^2 = \frac{1}{4}(\|y\|^2 - \|y\|^2 + i\|iy\|^2 - i\|iy\|^2) = 0 = 0 \times \phi(x,y)$.</p>
+<p><strong>Case 2:</strong> $c \in \mathbb{N}$. Due to Lemma 1, we know that $\phi$ is additive. Therefore $\phi(k x, y) = k\phi(x, y) \implies  \phi((k+1) x, y) = \phi(k x, y) + \phi(x, y) = (k+1)\phi(x, y)$. Since, $\phi(c x, y) = c\phi(x,y)$ is true when $c=0$ (i.e case 1), it is true for all natural numbers.</p>
+<p><strong>Case 3:</strong> $c = -1$. $\phi(c x, y) = \phi(-x, y) = \frac{1}{4}(\|-x + y\|^2 - \|-x - y\|^2 + i\|-x + iy\|^2 - i\|-x - iy\|^2) = \frac{1}{4}(\|x - y\|^2 - \|x + y\|^2 + i\|x - iy\|^2 - i\|x + iy\|^2) = -\phi(x, y)$.</p>
+<p><strong>Case 4:</strong> $c \in \mathbb{Z}$. If $c$ is positive it is same as case 2. If $c$ is negative, we can then $c = -d$ for some positive integer $d$ and thus $\phi(d x, y) = d\phi(x,y)$. Using Case 3, we get $\phi(c x, y) = \phi(-d x, y) = -\phi(d x, y) = -d\phi(x,y) = c\phi(x,y)$.</p>
+<p><strong>Case 5:</strong> $c \in \mathbb{Q}$. If $c \in \mathbb{Z}$, then this case just reduces to case 4. If $c$ is not an integer but rational then there exists co-prime integers $p,q$ such that $q > 1$ and $c = \frac{p}{q}$. Then due to left additivity, we know that $q\phi(c x, y) = \phi(p x, y)$. Since $p$ is an integer, $\phi(p x, y) = p\phi(x, y)$ due to case 4. Thus $\phi(c x, y) = \frac{p}{q}\phi(x, y)$.</p>
+<p align=right>$\quad \square$</p>
+<p>To prove that $\phi(c x, y) = c\phi(x,y)$ for real values of $c$ we will have to first establish the continuity of norm.</p>
+<p><strong>Lemma 3:</strong> Let $\|\cdot\|$ be a norm in some normed vector space $V$. Then $\|\cdot\|$ is continuous everywhere.</p>
+<p><strong>Proof:</strong> $\|\cdot\|$ is continuous at point $y$ iff $\lim_{x\to y}\|x\| = \|y\|$. We prove this with the epsilon delta defintion of limits.</p>
+<p>$\lim_{x\to y}\|x\| = \|y\|$ if $\forall \epsilon > 0 \text{ } \exists \delta > 0 \text{ } \|x -y\| \leq \delta \implies |\|x\| - \|y\|| \leq \epsilon$. Now, due to triangle inequality, we know that,
+$|\|x\| - \|y\|| \leq \|x - y\|$. Thus, we can simply set $\delta = \epsilon$. This proves that $\lim_{x\to y}\|x\| = \|y\|$ i.e norms are continuous.</p>
+<p align=right>$\quad \square$</p>
+<p>Now we can prove for the case of real values of $c$.</p>
+<p><strong>Lemma 4:</strong> $\phi(c x, y) = c\phi(x, y)$ when $c \in \mathbb{R}$</p>
+<p><strong>Proof:</strong> Any real $c$ can be expressed as the limit of a convergent sequence of rationals. Let $\{c_n\}_{n=1}^{\infty}$ be such a sequence. Let $f(\alpha) = \phi(\alpha x, y)$. Since, $\|\cdot\|$ is continuous $\alpha \rightarrow \alpha x$ is continuous, the square and addition are continuous functions, so is $f(\alpha)$. Since, $f(\alpha) = \phi(\alpha x, y)$ is continuous, $\phi(\lim_{\alpha\to c} x, y) = \lim_{\alpha\to c}\phi(\alpha x, y) = \lim_{n\to\infty}\phi(c_n x, y)$. Since, $c_n$ is rational, $\lim_{n \to \infty} \phi(c_n x, y) = \lim_{n\to \infty}c_n \times \lim_{n \to \infty}\phi(x, y) = c \times \phi(x, y)$.</p>
+<p align=right>$\quad \square$</p>
+<p>We are finally ready to prove the left homogenity of $\phi$.</p>
+<p><strong>Lemma 5:</strong> $\phi(c x, y) = c\phi(x, y)$ when $c \in \mathbb{C}$</p>
+<p><strong>Proof:</strong> We prove it by breaking it into cases:</p>
+<p><strong>Case 1:</strong> Consider the case where $c=i$. Then $\phi(c x, y) = \phi(i x, y) = \frac{1}{4}(\|ix + y\|^2 - \|ix - y\|^2 + i\|ix + iy\|^2 - i\|ix - iy\|^2) = \frac{1}{4}(\|x - iy\|^2 - \|x + iy\|^2 + i\|x + y\|^2 - i\|x - y\|^2) = i\phi(x, y)$.</p>
+<p><strong>Case 2:</strong> $c=it$ where $t \in \mathbb{R}$. Then $\phi(c x, y) = \phi(i tx, y) = i\phi(tx, y) = it\phi(x, y) = c\phi(x, y)$.</p>
+<p><strong>Case 3:</strong> $c=s+it$ where $s,t \in \mathbb{R}$. We know that $\phi(c x, y) = \phi(sx + itx, y) = \phi(sx, y) + \phi(itx, y)$ due to additivity. But = $\phi(itx, y) = it\phi(x, y)$ and $\phi(sx, y) = s\phi(x,y)$. Thus, $\phi(c x, y) = c\phi(x,y)$</p>
+<p align=right>$\quad \square$</p>
+<p>This concludes our proof of Jordan-Von-Neumann Theorem.</p>
+<br>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>I don&rsquo;t know about infinite dimensions. Probably yes. But it&rsquo;s beyond my grasp.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+    </div>
+    
+    <div class="post__tags">
+    <hr>
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M345 39.1L472.8 168.4c52.4 53 52.4 138.2 0 191.2L360.8 472.9c-9.3 9.4-24.5 9.5-33.9 .2s-9.5-24.5-.2-33.9L438.6 325.9c33.9-34.3 33.9-89.4 0-123.7L310.9 72.9c-9.3-9.4-9.2-24.6 .2-33.9s24.6-9.2 33.9 .2zM0 229.5L0 80C0 53.5 21.5 32 48 32l149.5 0c17 0 33.3 6.7 45.3 18.7l168 168c25 25 25 65.5 0 90.5L277.3 442.7c-25 25-65.5 25-90.5 0l-168-168C6.7 262.7 0 246.5 0 229.5zM144 144a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"/></svg>
+    
+    
+    <span>
+        <a href="/tags/math">math</a>,</span>
+    <span>
+        <a href="/tags/linear-algebra">linear-algebra</a></span>
+    
+    
+</div>
+
+    
+</div>
+
+
+      </main>
+    </div>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css" integrity="sha384-zh0CIslj+VczCZtlzBcjt5ppRcsAmDnRem7ESsYwWwg3m/OaJ2l4x7YBZl9Kxxib" crossorigin="anonymous">
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js" integrity="sha384-Rma6DA2IPUwhNxmrB/7S3Tno0YY7sFu9WSYMCuulLhIqYSGZ2gKCJWIqhBWqMQfh" crossorigin="anonymous"></script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js" integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+      console.log('rendering')
+      renderMathInElement(document.body, {
+        
+        
+        delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false},
+        ],
+        
+        throwOnError : false
+      });
+  });
+</script>
+
+    
+    <footer class="footer">
+      <p>Powered by <a href="https://gohugo.io/"><tt>hugo</tt></a> and <a href="https://github.com/hsiam261/ikaria"><tt>ikaria</tt></a>. </p>
+
+    </footer>
+  </div>
+</body>
+</html>

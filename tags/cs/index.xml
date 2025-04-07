@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cs on Siam&#39;s Log Book</title>
+    <link>http://localhost:8080/tags/cs/</link>
+    <description>Recent content in Cs on Siam&#39;s Log Book</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 05 Apr 2025 17:00:34 +0600</lastBuildDate>
+    <atom:link href="http://localhost:8080/tags/cs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Defining Problems, Solutions and Reductions</title>
+      <link>http://localhost:8080/note/defining-problems-solutions-and-reductions/</link>
+      <pubDate>Sat, 05 Apr 2025 17:00:34 +0600</pubDate>
+      <guid>http://localhost:8080/note/defining-problems-solutions-and-reductions/</guid>
+      <description>How Do You Define Problems? Consider the scenario that you are in an interview and the interviewer asked you a question $q$ from a selected pool of questions $Q$. And you reply with a response $r$. If the response $r$ is deemed appropriate for the question $q$ by the interviewer, then you got the answer right. There might be one or more responses that the interviewer deems appropriate. Our goal is to construct a way to pass the interview regardless what question the interviewer selects from $Q$.</description>
+    </item>
+    <item>
+      <title>Understanding NP</title>
+      <link>http://localhost:8080/note/understanding-np/</link>
+      <pubDate>Sat, 18 Jan 2025 20:01:37 +0600</pubDate>
+      <guid>http://localhost:8080/note/understanding-np/</guid>
+      <description>A decision problem $L$ is a subset of $\{ 0, 1 \}^*$.&#xA;NP A decision problem $L$ is in $\mathcal{NP}$ if and only if there exists a deterministic polynomial time verifier $V:\{0, 1\}^* \times \{0, 1\}^* \rightarrow \{0, 1\}$ and a polynomial $p$ that satisfies the following conditions:&#xA;Completeness: For all $x \in L$ there exists a certificate $c \in \{0, 1\}^*$ such that $|c| \leq p(|x|)$ and $V(x,c) = 1$.</description>
+    </item>
+  </channel>
+</rss>

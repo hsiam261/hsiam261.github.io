@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>All on Siam&#39;s Log Book</title>
+    <link>http://localhost:8080/categories/all/</link>
+    <description>Recent content in All on Siam&#39;s Log Book</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 05 Apr 2025 17:00:34 +0600</lastBuildDate>
+    <atom:link href="http://localhost:8080/categories/all/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Defining Problems, Solutions and Reductions</title>
+      <link>http://localhost:8080/note/defining-problems-solutions-and-reductions/</link>
+      <pubDate>Sat, 05 Apr 2025 17:00:34 +0600</pubDate>
+      <guid>http://localhost:8080/note/defining-problems-solutions-and-reductions/</guid>
+      <description>How Do You Define Problems? Consider the scenario that you are in an interview and the interviewer asked you a question $q$ from a selected pool of questions $Q$. And you reply with a response $r$. If the response $r$ is deemed appropriate for the question $q$ by the interviewer, then you got the answer right. There might be one or more responses that the interviewer deems appropriate. Our goal is to construct a way to pass the interview regardless what question the interviewer selects from $Q$.</description>
+    </item>
+    <item>
+      <title>Normed Vector Spaces and Inner Product Spaces</title>
+      <link>http://localhost:8080/note/normed-vector-spaces-and-inner-product-spaces/</link>
+      <pubDate>Thu, 03 Apr 2025 14:26:35 +0600</pubDate>
+      <guid>http://localhost:8080/note/normed-vector-spaces-and-inner-product-spaces/</guid>
+      <description>Normed Vector Space A normed vector space is a vector space $V$ paired with a function $\|\cdot\|: V \rightarrow \mathbb{R}_{\geq 0}$ called the norm function, that assigns &amp;ldquo;lengths&amp;rdquo; to vectors. For $\|\cdot\|$ to be a valid norm it must satisfy the following conditions:&#xA;Non-negativity: $\|v\| \geq 0$ for all vectors $v$. Non-degeneracy: $\|v\| = 0$ iff $v = 0$. Absolute Homogeneity: $\|\alpha v\| = |\alpha|\cdot\|v\|$ for all vectors $v$ and scalars $\alpha$.</description>
+    </item>
+    <item>
+      <title>Understanding NP</title>
+      <link>http://localhost:8080/note/understanding-np/</link>
+      <pubDate>Sat, 18 Jan 2025 20:01:37 +0600</pubDate>
+      <guid>http://localhost:8080/note/understanding-np/</guid>
+      <description>A decision problem $L$ is a subset of $\{ 0, 1 \}^*$.&#xA;NP A decision problem $L$ is in $\mathcal{NP}$ if and only if there exists a deterministic polynomial time verifier $V:\{0, 1\}^* \times \{0, 1\}^* \rightarrow \{0, 1\}$ and a polynomial $p$ that satisfies the following conditions:&#xA;Completeness: For all $x \in L$ there exists a certificate $c \in \{0, 1\}^*$ such that $|c| \leq p(|x|)$ and $V(x,c) = 1$.</description>
+    </item>
+    <item>
+      <title>Creating Threads From Scratch</title>
+      <link>http://localhost:8080/article/creating-threads-from-scratch/</link>
+      <pubDate>Mon, 23 Dec 2024 21:15:13 +0600</pubDate>
+      <guid>http://localhost:8080/article/creating-threads-from-scratch/</guid>
+      <description>Threads are an abstraction provided to applications that allow that the application to concurrently execute code while sharing the same address space. Threads can be implemented either completely in the user level or using the help of the Kernel. Userland threads are great due to being lightweight but since the kernel is not aware of their existence, they are treated like a second class citizen when compared to full blown processes.</description>
+    </item>
+  </channel>
+</rss>

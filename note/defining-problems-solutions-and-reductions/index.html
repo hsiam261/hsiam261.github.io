@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=8080&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="/favicon.ico" type="/favicon.ico"/>
+<title>Defining Problems, Solutions and Reductions | Siam&#39;s Log Book</title>
+
+
+
+
+
+<script>
+  console.log('\/assets\/base.css')
+  console.log('assets\/base.css')
+
+</script>
+
+
+
+
+  <link rel="stylesheet" href="/assets/base.min.fd43127b4dd7b97cce2e9d6a2953c8aed3e2cb412ea0935a77ed6c752c0ee6bc.css" integrity="sha256-/UMSe03XuXzOLp1qKVPIrtPiy0EuoJNad&#43;1sdSwO5rw=" crossorigin="anonymous">
+
+
+      <script src="/js/darkmode.929d1cf85e347ca0f0ab6aeabd1dcb9a09f60cae1f4a217792689166248dbd82.js" integrity="sha256-kp0c&#43;F40fKDwq2rqvR3Lmgn2DK4fSiF3kmiRZiSNvYI=" crossorigin="anonymous" defer></script>
+      <script src="/js/copy-codeblock.80f33002e9d4f9157dca624aff6b21fa586785c9a2c3331bebe1d8a423e18e68.js" integrity="sha256-gPMwAunU&#43;RV9ymJK/2sh&#43;lhnhcmiwzMb6&#43;HYpCPhjmg=" crossorigin="anonymous" defer></script>
+      <script src="/js/collapse-codeblock.0919b8b0724ee0b37d5bac71141a7efe13f0f4cd85d7915e87f60e17c6254d9c.js" integrity="sha256-CRm4sHJO4LN9W6xxFBp&#43;/hPw9M2F15Feh/YOF8YlTZw=" crossorigin="anonymous" defer></script>
+
+
+</head>
+<body>
+  <div class="root" id="root">
+    <header>
+      <nav class="nav">
+    <div class="nav__logo">
+        <svg viewBox="0 0 76 76" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="full" enable-background="new 0 0 76.00 76.00" xml:space="preserve"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path stroke-width="0.2" stroke-linejoin="round" d="M 35.625,29.6875C 36.4995,29.6875 37.2083,30.3964 37.2083,31.2708C 37.2083,32.1453 36.4994,32.8542 35.625,32.8542C 34.7505,32.8542 34.0417,32.1453 34.0417,31.2708C 34.0417,30.3964 34.7505,29.6875 35.625,29.6875 Z M 40.7708,29.6875C 41.6453,29.6875 42.3542,30.3964 42.3542,31.2708C 42.3542,32.1453 41.6453,32.8542 40.7708,32.8542C 39.8964,32.8542 39.1875,32.1453 39.1875,31.2708C 39.1875,30.3964 39.8964,29.6875 40.7708,29.6875 Z M 25.6695,50.3757C 24.9442,48.0415 24.5417,45.4621 24.5417,42.75L 24.5568,41.8418C 22.3238,43.0668 19.8176,44.3333 19,44.3333C 16.8873,44.3333 20.8257,39.4499 25.9794,34.1962C 26.4655,32.8374 27.0638,31.5722 27.7572,30.4249C 28.2641,24.0121 32.6565,19 38,19C 43.3435,19 47.7358,24.0121 48.2428,30.4249C 48.9362,31.5722 49.5345,32.8374 50.0206,34.1962C 55.1743,39.4499 59.1127,44.3333 57,44.3333C 56.1824,44.3333 53.6762,43.0669 51.4432,41.8418L 51.4583,42.75C 51.4583,45.4621 51.0558,48.0415 50.3305,50.3757L 48.2917,49.875C 48.2917,43.7841 45.5317,38.5857 41.649,36.5467L 38,42.75L 34.3514,36.5475C 30.4685,38.59 27.7084,43.8045 27.7085,49.9664L 25.6695,50.3757 Z M 34.0416,26.125C 31.8555,26.125 30.0833,28.2517 30.0833,30.875C 30.0833,33.4984 31.8555,35.625 34.0416,35.625C 36.2278,35.625 38,33.4984 38,30.875C 38,28.2517 36.2278,26.125 34.0416,26.125 Z M 38,30.875C 38,32.6239 39.7722,34.4375 41.9583,34.4375C 44.1444,34.4375 45.9166,32.6239 45.9166,30.875C 45.9166,29.1261 44.1444,27.3125 41.9583,27.3125C 39.7722,27.3125 38,29.1261 38,30.875 Z M 30.0833,50.6667C 33.1473,50.6667 35.7032,52.0266 36.29,53.8333L 36.8125,53.8333L 36.8125,55.4167L 36.29,55.4167C 35.7032,57.2234 33.1473,58.5833 30.0833,58.5833C 26.5855,58.5833 23.75,56.8111 23.75,54.625C 23.75,52.4389 26.5855,50.6667 30.0833,50.6667 Z M 45.9166,50.6667C 49.4144,50.6667 52.25,52.4389 52.25,54.625C 52.25,56.8111 49.4144,58.5833 45.9166,58.5833C 42.8526,58.5833 40.2968,57.2234 39.71,55.4167L 39.1875,55.4167L 39.1875,53.8333L 39.71,53.8333C 40.2968,52.0266 42.8526,50.6667 45.9166,50.6667 Z "></path> </g></svg>
+        <p>Siam&#39;s Log Book</p></a>
+    </div>
+    <div class="nav__links">
+        
+
+        
+        
+            <button><a href="/" >HOME</a></button>
+        
+            <button><a href="/categories/all/" >ALL</a></button>
+        
+            <button><a href="/article/" >ARTICLES</a></button>
+        
+            <button><a href="/note/" >NOTES</a></button>
+        
+            <button><a href="/library/" >LIBRARY</a></button>
+        
+            <button><a href="/about" >ABOUT</a></button>
+        
+        
+    </div>
+    <div class="nav__icon-tray">
+        <button class="nav__icon" id="darkmode-toggle">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M223.5 32C100 32 0 132.3 0 256S100 480 223.5 480c60.6 0 115.5-24.2 155.8-63.4c5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6c-96.9 0-175.5-78.8-175.5-176c0-65.8 36-123.1 89.3-153.3c6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M361.5 1.2c5 2.1 8.6 6.6 9.6 11.9L391 121l107.9 19.8c5.3 1 9.8 4.6 11.9 9.6s1.5 10.7-1.6 15.2L446.9 256l62.3 90.3c3.1 4.5 3.7 10.2 1.6 15.2s-6.6 8.6-11.9 9.6L391 391 371.1 498.9c-1 5.3-4.6 9.8-9.6 11.9s-10.7 1.5-15.2-1.6L256 446.9l-90.3 62.3c-4.5 3.1-10.2 3.7-15.2 1.6s-8.6-6.6-9.6-11.9L121 391 13.1 371.1c-5.3-1-9.8-4.6-11.9-9.6s-1.5-10.7 1.6-15.2L65.1 256 2.8 165.7c-3.1-4.5-3.7-10.2-1.6-15.2s6.6-8.6 11.9-9.6L121 121 140.9 13.1c1-5.3 4.6-9.8 9.6-11.9s10.7-1.5 15.2 1.6L256 65.1 346.3 2.8c4.5-3.1 10.2-3.7 15.2-1.6zM160 256a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zm224 0a128 128 0 1 0 -256 0 128 128 0 1 0 256 0z"/></svg>
+        </button>
+    </div>
+</nav>
+
+
+    </header>
+    <div class="container">
+      <div class="aside">
+    <div class="card">
+    <figure>
+        
+        <img src="/profile-pictures/profile.png">
+        
+        
+        <figcaption>Siam Habib</figcaption>
+        
+    </figure>
+    
+    <p> Software Engineer, Optimizely Inc. </p>
+    
+    <div class="icon-tray">
+        
+        <a href="https://github.com/hsiam261/"><button class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="icon__svg"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></button></a>
+        
+
+        
+        <button class="icon"><a href="https://bd.linkedin.com/in/siam-habib-a0a506b4"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="icon__svg"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg></a></button>
+        
+    </div>
+</div>
+
+    
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+
+
+<div class="tag-box">
+    <h4>Tags</h4>
+    <div class="tags-tray">
+        
+            <div class="tag">
+                <div class="tag__name"><a href="/tags/building-things-from-scratch">building-things-from-scratch</a></div><div class="tag__count">1</div>
+            </div>
+        
+            <div class="tag">
+                <div class="tag__name"><a href="/tags/cs-theory">cs-theory</a></div><div class="tag__count">1</div>
+            </div>
+        
+            <div class="tag">
+                <div class="tag__name"><a href="/tags/linear-algebra">linear-algebra</a></div><div class="tag__count">1</div>
+            </div>
+        
+            <div class="tag">
+                <div class="tag__name"><a href="/tags/linux">linux</a></div><div class="tag__count">1</div>
+            </div>
+        
+            <div class="tag">
+                <div class="tag__name"><a href="/tags/math">math</a></div><div class="tag__count">1</div>
+            </div>
+        
+            <div class="tag">
+                <div class="tag__name"><a href="/tags/np">np</a></div><div class="tag__count">1</div>
+            </div>
+        
+            <div class="tag">
+                <div class="tag__name"><a href="/tags/systems-programming">systems-programming</a></div><div class="tag__count">1</div>
+            </div>
+        
+            <div class="tag">
+                <div class="tag__name"><a href="/tags/threads">threads</a></div><div class="tag__count">1</div>
+            </div>
+        
+            <div class="tag">
+                <div class="tag__name"><a href="/tags/complexity101">complexity101</a></div><div class="tag__count">2</div>
+            </div>
+        
+            <div class="tag">
+                <div class="tag__name"><a href="/tags/cs">cs</a></div><div class="tag__count">2</div>
+            </div>
+        
+        <div class="tag">
+            <div class="see-all-tag"><a href="/tags/">See All >> </a></div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+      <main class="main">
+        
+  
+
+
+
+<div class="post autonumber">
+    
+    <div class="post__title">
+        <h1> Defining Problems, Solutions and Reductions </h1>
+    </div>
+    
+
+    
+    <div class="post__metadata">
+    <div class="post__metadata--entry">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="post__metadata--calender-icon"><path d="M128 0c17.7 0 32 14.3 32 32l0 32 128 0 0-32c0-17.7 14.3-32 32-32s32 14.3 32 32l0 32 48 0c26.5 0 48 21.5 48 48l0 48L0 160l0-48C0 85.5 21.5 64 48 64l48 0 0-32c0-17.7 14.3-32 32-32zM0 192l448 0 0 272c0 26.5-21.5 48-48 48L48 512c-26.5 0-48-21.5-48-48L0 192zm64 80l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16zm128 0l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0zM64 400l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16zm144-16c-8.8 0-16 7.2-16 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0zm112 16l0 32c0 8.8 7.2 16 16 16l32 0c8.8 0 16-7.2 16-16l0-32c0-8.8-7.2-16-16-16l-32 0c-8.8 0-16 7.2-16 16z"/></svg> Apr 05, 2025
+    </div>
+    <div class="post__metadata--entry">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="post__metadata--folder-icon"><path d="M88.7 223.8L0 375.8 0 96C0 60.7 28.7 32 64 32l117.5 0c17 0 33.3 6.7 45.3 18.7l26.5 26.5c12 12 28.3 18.7 45.3 18.7L416 96c35.3 0 64 28.7 64 64l0 32-336 0c-22.8 0-43.8 12.1-55.3 31.8zm27.6 16.1C122.1 230 132.6 224 144 224l400 0c11.5 0 22 6.1 27.7 16.1s5.7 22.2-.1 32.1l-112 192C453.9 474 443.4 480 432 480L32 480c-11.5 0-22-6.1-27.7-16.1s-5.7-22.2 .1-32.1l112-192z"/></svg> note
+    </div>
+</div>
+
+    
+    <div class="post__content">
+        <h2 id="how-do-you-define-problems">How Do You Define Problems?</h2>
+<p>Consider the scenario that you are in an interview and the interviewer asked you a question $q$ from a selected pool of questions $Q$. And you reply with a response $r$. If the response $r$ is deemed appropriate for the question $q$ by the interviewer, then you got the answer right. There might be one or more responses that the interviewer deems appropriate. Our goal is to construct a way to pass the interview regardless what question the interviewer selects from $Q$.</p>
+<p>We can abstractly model this scenario as a relation $P$ between two sets $Q$ and $R$. Where $Q$ is the set of questions and $R$ is the set of well formed responses. Members of $q$ are known as instances of the problem $P$. Given any instance $q \in Q$, we want to find a response $r \in R$ such that $(q, r) \in P$. We may make the simplifying assumption that (we will justify later) for any $q \in Q$, there exists atleast one $r \in R$ such that $(q,r) \in P$.</p>
+<p>Not just the interview problem, any well defined problem can be modeled a relation where every element of the source set has atleast one image. And our objective is given an instance of the problem (an element from the source set of the relation) find an image to it.</p>
+<h3 id="problems-and-encodings">Problems and Encodings</h3>
+<p>When source and target sets to a relation are countable (which is always the case in computer science), the inputs and outputs can be encoded with binary strings. Thus we may further restrict our definition of problems to relations from $\{0,1\}^*$ to $\{0,1\}^*$ where every element in $\{0,1\}^*$ has an image.</p>
+<p>Note that difficulty of our problem does vary based on our choice of encoding the problem. For example, consider the RSA experiment. In the RSA experiment, you are given a semi-prime number (is the product of exactly two primes) $N$, a number $e < \phi(N)$ co-prime to $\phi(N)$ where $\phi$ is the Euler totient function and an integer $y < N$ comprime to $N$ and you have to compute the $e$-th root of $y$. When the numbers are encoded as binary strings, the RSA assumption says that for some distribution of inputs this problem is hard even in the average case. However, instead of representing numbers with binary encoding, if we represented them with their prime factorization (encoded in binary), then problem becomes easy.</p>
+<p>Thus the choice of encoding may make the problem very easy or difficult or outright impossible.</p>
+<p>Another issue that may arise with encodings that are invalid. Not all binary strings actually encode a valid input to our original problem. For example, we may choose to encode a graph with $n$ vertices with a encoding of its size concatenated by an encoding of its adjacency matrix. We will encode the number $0$ as $00$, the number $1$ as $11$ and the number $01$ as the separator between the number of vertices of the graph and its adjaceny matrix. With such an encoding the string $11000100111100$ encodes $K_2$. Notice that not all binary strings are valid encodings to our problem. As an example, the number $0$ does not encode any valid graph
+with such an encoding.</p>
+<p>If such a case occurs where we not all binary strings are valid encodings, we will have to decide what should be considered as an acceptable answer when provided a binary string that doesn&rsquo;t encode any valid input. One approach in such a scenario may be that we want to be notified when that happens. In that regard, we will have fix some binary string to encode the result that the input binary string is invalid. This is why we can get away with adding the restriction that every instance of our problem has atleast one image/acceptable answer.</p>
+<p>This is not the only way we get to resolve the issue of invalid encoding. Another approach may be given an invalid encoding we accept any response as a valid response since the encoding is invalid. In that regard, we may update our encoded problems relation to reflect that. (Note that for a Turing Machine to be solution to our problem, we will still need it to halt for invalid strings).</p>
+<h3 id="what-if-we-want-to-relax-the-restriction-on-halting-for-invalid-inputs">What If We Want to Relax The Restriction On Halting For Invalid Inputs?</h3>
+<p>We may consider doing that. But in the next section we show that a solution in this relax variant of the problem, leads to an encoding that halts on all inputs.</p>
+<h3 id="why-we-ensure-that-every-instance-will-have-an-image-for-solvable-problems">Why We Ensure That Every Instance Will Have An Image For Solvable Problems?</h3>
+<p>Consider a relation $P$ from $Q$ to $R$ where $Q$ and $R$ are countable sets. Lets assume that there exists an encoding $E$ of $Q$ and $R$ such that a Turing machine $T$ exists for which the following holds:</p>
+<ul>
+<li>If $x$ is the encoding of an element of $Q$ that has an image in $P$, then $T(x)$ is an encoding of an image of $x$.</li>
+<li>If $x$ is not such a binary string, then $T(x)$ may or maynot halt.</li>
+</ul>
+<p>Then, we may construct a new encoding for the problem $P$. In this new encoding, we interpret the values of $R$ as the encoding $E$ interprets it. But we interpet values the encoding of instances as follows:</p>
+<ul>
+<li>We first check if the encoding of the input encodes pair of integers in some set encoding for encoding pairs.</li>
+<li>Then we check the values of the pair. Let the values be $x$ and $y$. We check if $y$ is a certificate that ensures that $T$ terminates on $x$. Note that such a certificate exists, the computation history of $T$ suffices as such a certificate.</li>
+<li>Then we interpret $x$ as $E$ interprets instances.</li>
+</ul>
+<p>In this encoding, we can solve the problem $P$ when we allow arbitrary answers to encodings that are invalid. Furthermore, in the encoded problem every element of $\{0,1\}^*$ has an image.</p>
+<h3 id="some-special-types-of-problems">Some Special Types of Problems</h3>
+<p>We look at some special types of problems and how they can be modeled using our definition of a problem:</p>
+<p><strong>Decision Problem:</strong> A decision problem can be modeled as a graph of a function where the range of the function is $\{0,1\}$.</p>
+<p><strong>Function Computation Problem:</strong>  In such problems we will have to compute a function $f:\{0,1\}^*\to\{0,1\}^*$. This be modeled as a graph of $f$.</p>
+<p><strong>Optimization Problem:</strong> Given $x \in \{0,1\}^*$, we have to compute $\min_{y \in \{0,1\}^*}f(x,y)$ for some objective function $f(x, \cdot)$. This is just a special case of the function computation problem.</p>
+<p><strong>Optimizing Search Problem:</strong> Given $x \in \{0,1\}^*$, we have to compute $\argmin_{y \in \{0,1\}^*}f(x,y)$ for some objective function $f(x, \cdot)$. This is just a special case of the function computation problem.</p>
+<p><strong>Search Problem:</strong> Given $x \in \{0,1\}^*$, find $y$, such that $(x,y)$ is in some relation $P$. This follows the general pattern of how we defined problems.</p>
+<p><strong>Approximating Search Problem:</strong> Given $x \in \{0,1\}^*$, find $y$, such that $(x,y)$ is in some relation $P$ and the objective value $f(x,y)$ does not deviate too much from $\min_{y \in \{0,1\}^*}f(x,y)$ where $f$ is some objective function. We may model this as a relation $P'$ where $(x,y) \in P' \iff (x,y) \in P \land \text{d}(f(x,y), \min_{y \in \{0,1\}^*}f(x,y)) \text{ is not too high }$ where $d$ is some deviation function (usually division).</p>
+<h2 id="solutions">Solutions</h2>
+<p>We say a Turing machine solves a problem modeled by a relation $R$ iff. the output of the turing machine (value in the output tape after machine halts) for an input $x$ is an image of $x$. Since turing machines are deterministic, the mapping from the input $x$ to the output that a turing machine will provide for $x$ is a function. We may call such function $f$ a solution function for the relation $R$.</p>
+<p>More formally, let $R$ be a relation from $\{0,1\}^*$ to $\{0,1\}^*$ and $f:\{0,1\}^*\to\{0,1\}^*$ be a function such that $f(x)$ is an image of $x$ in $R$. We call $f$ a solution function for $R$. We say that a turing machine solves $R$ if the turing machine computes $f$ for some solution function $f$.</p>
+<h2 id="reductions">Reductions</h2>
+<p>A reduction aims to find a solution to problem $A$ given a blackbox solution of problem $B$.</p>
+<p>Formally, an oracle machine is a Turing machine with an access to one or more oracles. An oracle to a function $f:\{0,1\}^*\to\{0,1\}^*$ is a pair of tapes (with their own tape heads) called the input tape and the output tape and a two states: oracle-ask and oracle-return. If a turing machine has an access to an oracle for $f$, it may compute $f(x)$ for some string $x$ by first writing $x$ to the oracle input tape and then transitioning to the oracle-ask state. When an oracle machine is in oracle-ask state for an oracle to some function $f$, the oracle machine writes the answer $f(x)$ to the oracle output tape and moves the oracle output tape head to the start of the output tape, empties input tape and immediately transitions to the oracle return state.</p>
+<p>Using oracle machines we may consider solving problems when given access to a blackbox to one or more functions. If there exists an oracle machine that can solve problem $A$, when given access to any solution function $f$ to the problem $B$, we say that problem $A$ reduces to $B$ and the oracle machine is called a reduction. We denote that $A$ reduces to $B$ with $A \leq B$ or $A \leq_{T} B$. Such reductions are also known as <strong>Turing Reductions</strong>, since if $B$ is computable, we can use the oracle machine that solves $A$ with an access to an oracle to some solution function of $B$ to construct a Turing Machine that solves $A$.</p>
+<p>Note that for an oracle machine to be a reduction from problem $A$ to problem $B$ the machine must be able solve problem $A$ regardless of the solution function of $B$ that the oracle can compute.</p>
+<h3 id="many-to-one-reduction">Many To One Reduction</h3>
+<p>If we have a Turing reduction from problem $A$ to problem $B$, it means that computability of $B$ implies the computability of $A$. But sometimes, we want to know if two problems are more intimately related. We say that a problem $A$ is homomorphic to problem $B$ there exists a pair of function $h_{in}:\{0,1\}^*\to\{0,1\}^*$ and $h_{out}:\{0,1\}^*\to\{0,1\}^*$ such that $(x,y) \in A \iff (h_{in}(x),h_{out}(y)) \in B$.</p>
+<p>There exists a homomorphism from $A$ to $B$, then the problem $A$ is just a subproblem of problem $B$ with a different (not necessarily injective) encoding. If the functions $h_{in}$ and $h_{out}$ are computable, then there exists a Turing reduction from $A$ to $B$ that invokes $B$ exactly once. We may call such a reduction a homomorphic reduction.</p>
+<p>A special case of homomorphism appers when we force the function $h_{out}$ to be the identity function. This may look like an artificial restriction, but this makes more sense when we are solving decision problems and function problems.</p>
+<p>We have already defined decision problems as a relation where the range is $\{0,1\}$. Another way to view decision problems are as a set $L \subseteq \{0,1\}^*$ and given $x \in \{0,1\}^*$ our objective is to determine whether or not $x \in L$. It&rsquo;s not hard to see that both definitions are equivalent. But under this new definition our restricted homomorphism of our former definition of decision problems results in homomorphism between the two problems in latter definition.</p>
+<p>For function problems, if problem $A$ seeks to compute a function $f$ and problem $B$ seeks to compute a function $g$ and if there is such a restricted homomorphism $h$ from problem $A$ to problem $B$, we can see that $f(x) = g(h(x))$ which is an interesting relation.</p>
+<p>If there is a such a restricted homomorphism $h$ from a problem $A$ to problem $B$ and $h$ is computable then then there exists an oracle machine that solves $A$ using an arbitrary oracle of $B$ with exactly one query to the oracle and using the result returned by the oracle verbatim and viceversa. We call such an oracle machine a <strong>Many to One Reduction</strong> from $A$ to $B$.</p>
+<p>Many to One reduction is a special case of Turing reduction and does not make any predictions about computability. But rather look for intimate relations between two problems.</p>
+<p>One way many to one reductinos are helpful is in the case of classifying problems in terms of their position in arithmetic hierarchy. If a decision problem $B$ is in $\Sigma_i$ for some integer $i$ and if there is a Turing reduction from a decision problem $A$ to $B$, yet we can not make the claim that $A$ is in $\Sigma_i$. For example, there is a turing reduction from the complement of the halting problem to the halting problem. But since, the Halting problem is not recursive, its complement is not recursively enumerable but the halting problem is.</p>
+<p>But if we were to only allow many to one reductions, this problem no longer exists. If there is a many to one reduction from $A$ to $B$ and $B$ is in $\Sigma_i$ or $\Pi_i$ for some $i$, then so is $A$. There is no many to one reductions from the complement of the halting problem to the halting problem.</p>
+<p>One reason why we may want to add further restrictions on our reductions is to look for such intimate relations. Another reason to add restrictions further is to distinguish between two problems that are different.</p>
+<h3 id="are-many-to-one-reductions-strictly-better-than-turing-reductions-in-computability-theory">Are Many To One Reductions Strictly Better Than Turing Reductions in Computability Theory?</h3>
+<p>One may assume that due to restricting reductions between problems in different positions in arithmetic hierarchy, Many To One Reductions are strictly better than Turing Reductions. But that is not the case. There may be Turing reductions that are useful in Computability Theory because, there is no guarantee that two computable languages will have a many to one reduction between them. For example, no non-empty computable language has a many to one reduction to the empty set. But, for Turing reductions, we can guarantee that every computable language reduces to another.</p>
+<p>So, the problem with Turing reductions are that they are too permissive and allow reductions from non-recursively enumerable languages to recursively enumerable languages and the problem of many to one reductions are that they may be too restrictive and disallow reductions between two computable languages.</p>
+<h3 id="reductions-in-complexity-theory">Reductions In Complexity Theory</h3>
+<p>In complexity theory, we are only concerned with problems that are computable and we add further restrictions on time, memory and accuracy of our solutions.
+Following are some examples of questions that complexity theory studies:</p>
+<ul>
+<li>Is a computable problem $A$ polynomial time solvable?</li>
+<li>Is a computable problem $A$ solvable when only given access to polynomial sized memory?</li>
+<li>Is a computable problem $A$ solvable in FPT time?</li>
+<li>Can a computable optimization problem $A$ be approximated up to a factor of $r(|x|)$ in polynomial time?</li>
+</ul>
+<p>So far in complexity theory, we have been unable to come to exact answer to any such questioins without making some assumptions about difficulty of a problem. In complexity theory we use reductions to create a web implications about the diffculty of problems and define useful classes of problems and study if one is equal to another or a subset of another.</p>
+<h3 id="different-types-of-reductions-in-complexity-theory">Different Types of Reductions in Complexity Theory</h3>
+<p>If we were only concerned with whether or not $B$ is computable, then, Turing reductions may be useful. However, in practice, we are more often concerned with computability under restrictions on runtime, memory, accuracy or some combination of them. Under such considerations, we define different types of reductions, some of which we discuss in this section.</p>
+<p><strong>Polynomial Time Solvability:</strong> In practice we do not just want to solve a problem $A$, but solve it effeciently. The notion of efficiency that is widely accepted in computer science is the notion of polynomial time solvability. We want to find a Turing machine that solves $A$ in atmost $p(|x|)$ steps for any input $x$ where $p$ is some polynomial.</p>
+<p>When considering such restrictions, we use the notion of Polynomial Time Turing Reductions. A Turing Reduction is a polynomial time Turing reduction if it runs atmost for polynomial time steps (and therefore can query the oracles atmost polynomial number of times). If there is a polynomial time Turing reduction from $A$ to $B$ and if $B$ is polynomial time solvable, then so is $A$.</p>
+<p>Polynomial time Turing reduction is also known as Cook reduction and is denoted as $A \leq_{T}^P B$.</p>
+<p><strong>Karp Reduction:</strong> Karp reductions are many to one reductions under the restriction that it runs for polynomial times. Karp Reductions are also known as polynomial time many to one reductions and is denoted by $A \leq_{m}^P B$ or $A \leq_{p} B$.</p>
+<p>Karp Reductions have the same benefit over Cook Reductions that Many to One reductions have on Turing reductions. Karp reductions are more restrictive than cook reductions and thus allow for more finding more intimate relationship between problems and distinguish between problems and complexity classes that may not be similar. For example, it is not known whether given an NDT that runs in polynomial time, there exists another that recongizes its complement in polynomial time. This is known as the $\mathcal{NP}$ vs $\mathcal{CoNP}$ problem. While Karp Reudcitons may be able to distinguish between $\mathcal{NP}$ and $\mathcal{CoNP}$, Cook reductions can not.</p>
+<p>Similar to the case with comutability, with Cook Reduction, every problem in $P$ reduces to every other problem in $P$. But it is not the case in Karp reductions. The no non-empty language in $P$ can reduce to the empty language which is also in $P$.</p>
+<p>Karp Reductions are the standard in the literature when studying NP and NP completeness as opposed to Cook reductions.</p>
+<p><strong>FPT Reduction:</strong> We may want to relax our restriction that a decidable problem needs to be solvable in polynomial time. Instead we may parameterize our problem with some integer $k$ and hope that our problem is polynomial time solvable when $k$ is fixed where the polynomial does not depend on $k$. This is known as fixed parameter tractiblilty.</p>
+<p>If there is a Karp reduction from a parameterized problem $A$ to a parameterized problem $B$ such that the following holds:</p>
+<ul>
+<li>running time of the reduction is FPT</li>
+<li>the mapped parameter to problem $B$ only depends on the parameter of problem $A$</li>
+<li>the size of mapped non-parameter input to problem $B$ is bounded by some polynomial of the non-parameter input to problem $A$
+then, we call such a reduction an FPT reduction. If there is an FPT reduction from $A$ to $B$ and $B$ is fixed parameter tractible, then so is $A$.</li>
+</ul>
+<p><strong>Approximation Preserving Reduction:</strong> Often when faced with a computable problem that we have not been able to solve efficiently, we seek to find an approximate solution. Then we may want to solve an approximating variant of the problem in polynomial time. Then we need to add restrictions on reductions so that a polynomial time approximation algorithm for problem $B$ leads to a polynomial time approximation algorithm for problem $A$. Classical versions of approximation preserving reductions are polynomial time homomorphic reduction that preserves some guarantees on the approximation ratio.</p>
+<p>For example, we call a homomorphic reduction from an approximation problem $A$ to an approximation problem $B$ if for any oracle of $B$, the approximation ratio for the reduction is bounded by the approximation ratio of the oracle.</p>
+
+    </div>
+    
+    <div class="post__tags">
+    <hr>
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M345 39.1L472.8 168.4c52.4 53 52.4 138.2 0 191.2L360.8 472.9c-9.3 9.4-24.5 9.5-33.9 .2s-9.5-24.5-.2-33.9L438.6 325.9c33.9-34.3 33.9-89.4 0-123.7L310.9 72.9c-9.3-9.4-9.2-24.6 .2-33.9s24.6-9.2 33.9 .2zM0 229.5L0 80C0 53.5 21.5 32 48 32l149.5 0c17 0 33.3 6.7 45.3 18.7l168 168c25 25 25 65.5 0 90.5L277.3 442.7c-25 25-65.5 25-90.5 0l-168-168C6.7 262.7 0 246.5 0 229.5zM144 144a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"/></svg>
+    
+    
+    <span>
+        <a href="/tags/cs">cs</a>,</span>
+    <span>
+        <a href="/tags/complexity101">complexity101</a></span>
+    
+    
+</div>
+
+    
+</div>
+
+
+      </main>
+    </div>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css" integrity="sha384-zh0CIslj+VczCZtlzBcjt5ppRcsAmDnRem7ESsYwWwg3m/OaJ2l4x7YBZl9Kxxib" crossorigin="anonymous">
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js" integrity="sha384-Rma6DA2IPUwhNxmrB/7S3Tno0YY7sFu9WSYMCuulLhIqYSGZ2gKCJWIqhBWqMQfh" crossorigin="anonymous"></script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js" integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh" crossorigin="anonymous"
+    onload="renderMathInElement(document.body);"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+      console.log('rendering')
+      renderMathInElement(document.body, {
+        
+        
+        delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false},
+        ],
+        
+        throwOnError : false
+      });
+  });
+</script>
+
+    
+    <footer class="footer">
+      <p>Powered by <a href="https://gohugo.io/"><tt>hugo</tt></a> and <a href="https://github.com/hsiam261/ikaria"><tt>ikaria</tt></a>. </p>
+
+    </footer>
+  </div>
+</body>
+</html>
